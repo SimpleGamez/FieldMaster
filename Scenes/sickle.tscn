@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cicolf0xs5x3w"]
+
+[ext_resource type="Script" path="res://Scripts/sickle.gd" id="1_0x0pa"]
+[ext_resource type="Texture2D" uid="uid://cb3k2vm1f8u3n" path="res://Assets/sickle2.png" id="1_ebi11"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocsa0"]
+size = Vector2(32, 31)
+
+[node name="sickle" type="Area2D"]
+script = ExtResource("1_0x0pa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ocsa0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_ebi11")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

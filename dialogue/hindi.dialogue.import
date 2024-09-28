@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://dbo1p2yuhgpot"
+path="res://.godot/imported/hindi.dialogue-53eb5111db557776f619462025c541fa.tres"
+
+[deps]
+
+source_file="res://dialogue/hindi.dialogue"
+dest_files=["res://.godot/imported/hindi.dialogue-53eb5111db557776f619462025c541fa.tres"]
+
+[params]
+
+defaults=true

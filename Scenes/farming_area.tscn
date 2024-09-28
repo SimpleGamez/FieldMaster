@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://diply1j1rtcr7"]
+
+[ext_resource type="Texture2D" uid="uid://bxe66p3cv0jv0" path="res://Assets/farm_land.png" id="1_x8nh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7lnl0"]
+size = Vector2(96, 64)
+
+[node name="farming_area" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_x8nh1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7lnl0")

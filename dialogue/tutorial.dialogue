@@ -1,0 +1,25 @@
+~ start
+
+[wait=0.5]Hello {{Global.player_name}}!\nPress Enter to Continue.
+[wait=0.5]The sun is peeking over the horizon why don't you start your joyful journey in this farming world.\nPress Enter to Continue.
+[wait=0.5]First of all, we start with how to move in this world\nStart with 'W' key to move forward\nPress 'A' key to move towards left\nPress 'S' key to move downward\nPress 'D' key to move towards right
+[wait=0.5]Great! Now you are familiar with the movements of the game.\nPress Enter to Continue
+[wait=0.5]Now get the hoe
+[wait=0.5]You have a hoe, which will be used to plough the field.\nPress Enter to Continue
+[wait=0.5]The fields can be identified by dark patches on them.\nPress Enter to Continue
+[wait=0.5]Plough the field by getting close to the dark patches and by pressing 'E' on the keyboard.
+[wait=0.5]Great! you have ploughed the farm, now we need to put seeds on them,\nGo back and pick up the seeds\nPress Enter to continue.
+[wait=0.5]Now, sow the seeds on the ploughed field by pressing 'E' on the keyboard.
+[wait=0.5]Now, you have to pour water on the field\nGrab water bucket
+[wait=0.5]You have a water buket, which will be used to water the field.\nPress Enter to Continue
+[wait=0.5]Water the field by getting close to the ploughed field and by pressing 'E' on the keyboard
+[wait=0.5]Great! you have watered the farm\nWait for some time for seed to grow
+[wait=0.5]Oh! Great it's raining , so you did not have to water the crop again
+[wait=0.5]Now go back to your field to check whether the crop is ready to harvest or not
+[wait=0.5]Oh! Great the crop is ready to harvest!
+[wait=0.5]Now, you have to harvest the crop\nGrab sickle from the house
+[wait=0.5]You have a sickle, which will be used to harvest the crop.\nPress Enter to Continue
+[wait=0.5]Press 'E' to harvest the crop
+[wait=0.5]Congratulations! You have successfully harvested the first cycle of crops
+
+=> END

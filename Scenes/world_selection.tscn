@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://rem6h52imlea"]
+
+[ext_resource type="Script" path="res://Scripts/world_selection.gd" id="1_pk1nw"]
+[ext_resource type="AudioStream" uid="uid://bp7on0i71hs60" path="res://Assets/music.mp3" id="2_vkh3w"]
+[ext_resource type="Texture2D" uid="uid://cjaljql0nre8u" path="res://Assets/background.png" id="3_85x72"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0bic"]
+bg_color = Color(0.215686, 0.215686, 0.215686, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfom6"]
+bg_color = Color(1, 0.941176, 0.176471, 1)
+border_width_bottom = 10
+border_color = Color(1, 0.745098, 0.0980392, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75eo6"]
+bg_color = Color(0.941176, 0.333333, 0, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qin2s"]
+bg_color = Color(0.941176, 0.333333, 0, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+
+[node name="World Selection" type="Node2D"]
+script = ExtResource("1_pk1nw")
+
+[node name="for_new" type="CanvasLayer" parent="."]
+
+[node name="LineEdit" type="LineEdit" parent="for_new"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -168.0
+offset_right = 252.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0bic")
+theme_override_styles/focus = SubResource("StyleBoxFlat_c0bic")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_c0bic")
+placeholder_text = "ENTER PLAYER NAME"
+alignment = 1
+max_length = 25
+clear_button_enabled = true
+
+[node name="create" type="Button" parent="for_new"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = -38.5
+offset_right = 94.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfom6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_75eo6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qin2s")
+text = "CREATE"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("2_vkh3w")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(639.5, 359.75)
+scale = Vector2(2.04633, 1.72782)
+texture = ExtResource("3_85x72")
+
+[connection signal="pressed" from="for_new/create" to="." method="_on_create_pressed"]

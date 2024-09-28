@@ -1,0 +1,82 @@
+~ start
+Welcome to MCQ's 
+=> q1
+
+~ q1
+QUESTION1: What is hoe used for?
+- A. To Harvest
+	Wrong Answer\nCorrect Answer - To Plough
+	=> q2
+- B. To Water
+	Wrong Answer\nCorrect Answer - To Plough
+	=> q2
+- C. To Plough
+	Correct Answer 
+	=> q2
+- D. All of these
+	Wrong Answer\nCorrect Answer - To Plough 
+	=> q2
+
+~ q2
+QUESTION2: When do we sow the seed?
+- A. Diectly in the field
+	Wrong Answer\nCorrect Answer - After ploughing the field
+	=> q3
+- B. After ploughing the field
+	Correct Answer 
+	=> q3
+- C. After pouring the water
+	Wrong Answer\nCorrect Answer - After ploughing the field
+	 => q3
+- D. After Harvesting
+	Wrong Answer\nCorrect Answer - After ploughing the field
+	=> q3
+
+~ q3
+QUESTION3: When do we water the plants?
+- A. After ploughing the field
+	Wrong Answer\nCorrect Answer - After sowing the seeds in the field
+	=> q4
+- B. After sowing the seeds in the field
+	Correct Answer 
+	=> q4
+- C. After harvesting the crop
+	Wrong Answer\nCorrect Answer - After sowing the seeds in the field
+	=> q4
+- D. All of the above
+	Wrong Answer\nCorrect Answer - After sowing the seeds in the field
+	=> q4
+
+~ q4
+QUESTION4: What is the use of sickle?
+- A. To plough
+	Wrong Answer\nCorrect Answer - None of the above
+	=> q5
+- B. To water
+	Wrong Answer\nCorrect Answer - None of the above
+	=> q5
+- C. To sow the seeds
+	Wrong Answer\nCorrect Answer - None of the above
+	=> q5
+- D. None of the above 
+	Correct Answer 
+	=> q5
+
+~ q5
+QUESTION5: When do we experience the rainy season?
+- A. After Summer season
+	Correct Answer 
+	=> all_done
+- B. After winter season
+	Wrong Answer\nCorrect Answer - After Summer season 
+	=> all_done
+- C. After Spring Season
+	Wrong Answer\nCorrect Answer - After Summer season 
+	=> all_done
+- D. All of the above
+	Wrong Answer\nCorrect Answer - After Summer season
+	=> all_done
+
+~ all_done
+MCQ Completed 
+=> END

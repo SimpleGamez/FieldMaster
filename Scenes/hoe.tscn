@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1lttrhdnccxa"]
+
+[ext_resource type="Texture2D" uid="uid://dwgu8a477r4gj" path="res://Assets/Hoe.png" id="1_hx2yq"]
+[ext_resource type="Script" path="res://Scripts/hoe.gd" id="1_lb3mg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uv4f1"]
+size = Vector2(26, 30)
+
+[node name="Hoe" type="Area2D"]
+script = ExtResource("1_lb3mg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_hx2yq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uv4f1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

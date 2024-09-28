@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8mcvxarnlkbe"]
+
+[ext_resource type="Script" path="res://Scripts/MCQ.gd" id="1_1afct"]
+[ext_resource type="Texture2D" uid="uid://hovvk6chio5t" path="res://Assets/bg_new.jpg" id="2_0jxun"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2jat"]
+bg_color = Color(0.901961, 0.254902, 0.137255, 1)
+border_width_bottom = 7
+border_color = Color(0.756863, 0.156863, 0.137255, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2fhr"]
+bg_color = Color(0.756863, 0.156863, 0.137255, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 5
+
+[node name="MCQ" type="Node2D"]
+script = ExtResource("1_1afct")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.792157, 0.309804, 1)
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(639.5, 360)
+scale = Vector2(2.04633, 2.05128)
+texture = ExtResource("2_0jxun")
+
+[node name="Menu" type="Button" parent="CanvasLayer"]
+offset_left = 1168.0
+offset_top = 8.0
+offset_right = 1267.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_r2jat")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o2fhr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o2fhr")
+text = "MENU"
+
+[connection signal="pressed" from="CanvasLayer/Menu" to="." method="_on_button_pressed"]

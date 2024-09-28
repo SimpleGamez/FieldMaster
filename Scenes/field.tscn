@@ -1,0 +1,264 @@
+[gd_scene load_steps=20 format=3 uid="uid://d2nqcgws7tptj"]
+
+[ext_resource type="Texture2D" uid="uid://bxe66p3cv0jv0" path="res://Assets/farm_land.png" id="1_7geat"]
+[ext_resource type="Script" path="res://Scripts/field.gd" id="1_cbavd"]
+[ext_resource type="Texture2D" uid="uid://c4sygfumaq14j" path="res://Assets/soil.png.jpg" id="2_dv50g"]
+[ext_resource type="Texture2D" uid="uid://bghn6en0inys2" path="res://Assets/progress-bar-circle.png" id="4_5xkk5"]
+[ext_resource type="Texture2D" uid="uid://uhm4ebastv46" path="res://Assets/seeded_soil.png" id="4_o1xca"]
+[ext_resource type="Texture2D" uid="uid://2ed115bxpcon" path="res://Assets/farm_land 2.png" id="5_amng4"]
+[ext_resource type="Texture2D" uid="uid://np801lp6in4r" path="res://Assets/progress-bar-frame.png" id="5_mw8hf"]
+[ext_resource type="Texture2D" uid="uid://dqteeujowfkcg" path="res://Assets/Sprout Lands - Sprites - Basic pack/Objects/Basic_Plants.png" id="6_l83xp"]
+[ext_resource type="Texture2D" uid="uid://cb3k2vm1f8u3n" path="res://Assets/sickle2.png" id="8_wr2tw"]
+[ext_resource type="Texture2D" uid="uid://dm36msg6vtexl" path="res://Assets/circle.png" id="9_6vqe2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03ngw"]
+size = Vector2(96, 64)
+
+[sub_resource type="Animation" id="Animation_kklpn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SeededSoil:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_scw4a"]
+resource_name = "getting_watered"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.745098, 0.705882, 0.705882, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SeededSoil:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.745098, 0.705882, 0.705882, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_14ih1"]
+_data = {
+"RESET": SubResource("Animation_kklpn"),
+"getting_watered": SubResource("Animation_scw4a")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foajh"]
+atlas = ExtResource("6_l83xp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rklx5"]
+atlas = ExtResource("6_l83xp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iii5b"]
+atlas = ExtResource("6_l83xp")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5yh8"]
+atlas = ExtResource("6_l83xp")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c33r2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foajh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foajh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foajh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foajh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foajh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rklx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rklx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rklx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rklx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rklx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iii5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iii5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iii5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iii5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iii5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5yh8")
+}],
+"loop": false,
+"name": &"wheat_grow",
+"speed": 1.0
+}]
+
+[node name="field" type="Area2D"]
+process_mode = 3
+z_index = 1
+script = ExtResource("1_cbavd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_7geat")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_03ngw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("2_dv50g")
+
+[node name="SeededSoil" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("4_o1xca")
+
+[node name="FarmLand2" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("5_amng4")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+visible = false
+z_index = 1
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 112.0
+offset_bottom = 112.0
+scale = Vector2(0.25, 0.25)
+step = 0.01
+fill_mode = 4
+texture_under = ExtResource("4_5xkk5")
+texture_over = ExtResource("5_mw8hf")
+texture_progress = ExtResource("4_5xkk5")
+tint_under = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_14ih1")
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+visible = false
+scale = Vector2(1.5, 1.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(-16, -17)
+sprite_frames = SubResource("SpriteFrames_c33r2")
+animation = &"wheat_grow"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(0, -17)
+sprite_frames = SubResource("SpriteFrames_c33r2")
+animation = &"wheat_grow"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(16, -17)
+sprite_frames = SubResource("SpriteFrames_c33r2")
+animation = &"wheat_grow"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(-16, -4)
+sprite_frames = SubResource("SpriteFrames_c33r2")
+animation = &"wheat_grow"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(0, -4)
+sprite_frames = SubResource("SpriteFrames_c33r2")
+animation = &"wheat_grow"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(16, -4)
+sprite_frames = SubResource("SpriteFrames_c33r2")
+animation = &"wheat_grow"
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(-16, 9)
+sprite_frames = SubResource("SpriteFrames_c33r2")
+animation = &"wheat_grow"
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(0, 9)
+sprite_frames = SubResource("SpriteFrames_c33r2")
+animation = &"wheat_grow"
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(16, 9)
+sprite_frames = SubResource("SpriteFrames_c33r2")
+animation = &"wheat_grow"
+
+[node name="Sickle2" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(1, -1)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("8_wr2tw")
+
+[node name="Circle" type="Sprite2D" parent="Sickle2"]
+modulate = Color(1, 1, 1, 0.745098)
+z_index = -1
+position = Vector2(-1, 1)
+scale = Vector2(0.694444, 0.694444)
+texture = ExtResource("9_6vqe2")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="Node2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

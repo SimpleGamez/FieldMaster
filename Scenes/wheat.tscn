@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://fxraajay81fd"]
+
+[ext_resource type="Script" path="res://Scripts/wheat.gd" id="1_7masb"]
+[ext_resource type="Texture2D" uid="uid://dqteeujowfkcg" path="res://Assets/Sprout Lands - Sprites - Basic pack/Objects/Basic_Plants.png" id="1_tdcj5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v86nh"]
+size = Vector2(32, 31)
+
+[node name="wheat" type="Area2D"]
+script = ExtResource("1_7masb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_v86nh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_tdcj5")
+hframes = 6
+vframes = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

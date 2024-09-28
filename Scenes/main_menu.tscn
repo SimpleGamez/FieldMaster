@@ -1,0 +1,196 @@
+[gd_scene load_steps=12 format=3 uid="uid://cfv86sv3qytx6"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_v8jss"]
+[ext_resource type="Texture2D" uid="uid://hovvk6chio5t" path="res://Assets/bg_new.jpg" id="2_bxo4n"]
+[ext_resource type="AudioStream" uid="uid://bp7on0i71hs60" path="res://Assets/music.mp3" id="2_lg7tt"]
+[ext_resource type="Texture2D" uid="uid://pa4bjwclq86i" path="res://Assets/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="3_53qqt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2vpd"]
+bg_color = Color(0, 1, 0.380392, 1)
+border_width_bottom = 10
+border_color = Color(0.219608, 0.690196, 0, 1)
+corner_radius_top_left = 15
+corner_radius_bottom_right = 15
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejirk"]
+bg_color = Color(0.219608, 0.690196, 0, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bkhxi"]
+bg_color = Color(0, 0.898039, 0.945098, 1)
+border_width_bottom = 10
+border_color = Color(0, 0.764706, 0.945098, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tme7i"]
+bg_color = Color(0, 0.764706, 0.945098, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_grmpn"]
+bg_color = Color(0.917647, 0.207843, 0.215686, 1)
+border_width_bottom = 10
+border_color = Color(0.65098, 0.109804, 0.12549, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb1qv"]
+bg_color = Color(0.65098, 0.109804, 0.12549, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ihmh"]
+bg_color = Color(0.392157, 0.333333, 0.627451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_v8jss")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(639.5, 360)
+scale = Vector2(2.04633, 2.05128)
+texture = ExtResource("2_bxo4n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 512.0
+offset_bottom = 640.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="play" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_b2vpd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejirk")
+text = "PLAY"
+
+[node name="mcq" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_bkhxi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tme7i")
+text = "PRACTICE"
+
+[node name="lang" type="OptionButton" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+alignment = 1
+
+[node name="exit" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_grmpn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eb1qv")
+text = "EXIT"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+z_index = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.784314)
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -160.0
+offset_right = 141.0
+offset_bottom = -91.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "LANGUAGE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lang" type="OptionButton" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -72.0
+offset_right = 192.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+alignment = 1
+
+[node name="Game_name" type="RichTextLabel" parent="."]
+offset_left = 64.0
+offset_top = 80.0
+offset_right = 536.0
+offset_bottom = 190.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[wave]FieldMaster[/wave]"
+fit_content = true
+
+[node name="BasicCharakterSpritesheet" type="Sprite2D" parent="."]
+position = Vector2(1008, 360)
+scale = Vector2(10, 10)
+texture = ExtResource("3_53qqt")
+hframes = 4
+vframes = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("2_lg7tt")
+
+[node name="player_name" type="LineEdit" parent="."]
+offset_left = 824.0
+offset_top = 464.0
+offset_right = 1192.0
+offset_bottom = 514.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ihmh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5ihmh")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_5ihmh")
+text = "FARMER"
+placeholder_text = "Enter Name"
+alignment = 1
+max_length = 20
+clear_button_enabled = true
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/mcq" to="." method="_on_mcq_pressed"]
+[connection signal="item_selected" from="CanvasLayer/VBoxContainer/lang" to="." method="_on_lang_item_selected"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="item_selected" from="CanvasLayer/ColorRect/lang" to="." method="_on_lang_item_selected"]

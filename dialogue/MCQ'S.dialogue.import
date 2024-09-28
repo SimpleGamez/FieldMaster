@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://dmopejw8vc4my"
+path="res://.godot/imported/MCQ'S.dialogue-3744cf3e559a26daedb895d446cd80f0.tres"
+
+[deps]
+
+source_file="res://dialogue/MCQ'S.dialogue"
+dest_files=["res://.godot/imported/MCQ'S.dialogue-3744cf3e559a26daedb895d446cd80f0.tres"]
+
+[params]
+
+defaults=true

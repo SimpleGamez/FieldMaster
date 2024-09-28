@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cjf5e0vcy2rb0"
+path="res://.godot/imported/hindiMCQ's.dialogue-7bd94011d9b224bd342c95074b5f2591.tres"
+
+[deps]
+
+source_file="res://dialogue/hindiMCQ's.dialogue"
+dest_files=["res://.godot/imported/hindiMCQ's.dialogue-7bd94011d9b224bd342c95074b5f2591.tres"]
+
+[params]
+
+defaults=true

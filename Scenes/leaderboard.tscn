@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://obquomy33tak"]
+
+[ext_resource type="Script" path="res://Scripts/leaderboard.gd" id="1_u4ymu"]
+
+[node name="Leaderboard" type="Node2D"]
+script = ExtResource("1_u4ymu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.254902, 0.254902, 0.254902, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 168.0
+offset_top = 40.0
+offset_right = 383.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 30
+text = "LEADERBOARD"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(424, 440)
+offset_left = 64.0
+offset_top = 88.0
+offset_right = 488.0
+offset_bottom = 688.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Player_rank" type="Node2D" parent="CanvasLayer"]
+
+[node name="Label" type="Label" parent="CanvasLayer/Player_rank"]
+offset_left = 664.0
+offset_top = 128.0
+offset_right = 808.0
+offset_bottom = 163.0
+theme_override_font_sizes/font_size = 25
+text = "YOUR RANK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Player_rank"]
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 700.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 20
+text = "NAME :"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Player_rank"]
+offset_left = 640.0
+offset_top = 256.0
+offset_right = 700.0
+offset_bottom = 279.0
+theme_override_font_sizes/font_size = 20
+text = "RANK :"
+
+[node name="Label4" type="Label" parent="CanvasLayer/Player_rank"]
+offset_left = 640.0
+offset_top = 320.0
+offset_right = 704.0
+offset_bottom = 343.0
+theme_override_font_sizes/font_size = 20
+text = "SCORE :"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
